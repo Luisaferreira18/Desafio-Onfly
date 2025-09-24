@@ -7,7 +7,7 @@ Repositório criado para o **Desafio Onfly**, utilizando **n8n** e **Docker** pa
 ## 🔎 Sobre o Projeto
 O objetivo deste projeto é:
 - Subir e configurar um ambiente **n8n** com Docker.
-- Implementar **nós customizados** (exemplo: nó `Random` para gerar números).
+- Implementar nós customizados, como o nó Random para gerar números aleatórios.
 - Testar e versionar workflows de automação.
 
 ---
@@ -21,7 +21,9 @@ O objetivo deste projeto é:
 
 ---
 
-Após subir a infraestrutura com Docker Compose, o n8n estará disponível localmente em:
+🚀 Acesso ao n8n
+
+Após subir a infraestrutura com Docker Compose, o n8n estará disponível localmente:
 
 http://localhost:5678
 
