@@ -20,3 +20,8 @@ O objetivo deste projeto é:
 - **Git/GitHub**
 
 ---
+
+Após subir a infraestrutura com Docker Compose, o n8n estará disponível localmente em:
+
+http://localhost:5678
+
