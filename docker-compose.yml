@@ -1,0 +1,35 @@
+
+services:
+  postgres:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: n8n
+      POSTGRES_PASSWORD: n8n
+      POSTGRES_DB: n8n
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  n8n:
+    image: n8nio/n8n:latest
+    restart: always
+    environment:
+      DB_TYPE: postgres
+      DB_POSTGRES_HOST: postgres
+      DB_POSTGRES_PORT: 5432
+      DB_POSTGRES_DB: n8n
+      DB_POSTGRES_USER: n8n
+      DB_POSTGRES_PASSWORD: n8n
+      GENERIC_TIMEZONE: 'America/Sao_Paulo'
+      N8N_PORT: 5678
+      N8N_CUSTOM_EXTENSIONS: /home/node/.n8n/custom
+    volumes:
+      - ./.n8n:/home/node/.n8n
+      - ./custom_nodes/random-node/nodes:/home/node/.n8n/custom
+    ports:
+      - '5678:5678'
+    depends_on:
+      - postgres
+

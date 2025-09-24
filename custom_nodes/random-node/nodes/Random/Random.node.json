@@ -1,0 +1,56 @@
+{
+  "node": "n8n-nodes-base.random",
+  "displayName": "Random",
+  "name": "random",
+  "icon": "file:random.svg",
+  "group": [
+    "transform"
+  ],
+  "version": 1,
+  "description": "Gera um número inteiro aleatório usando a API do Random.org.",
+  "defaults": {
+    "name": "Random"
+  },
+  "inputs": [
+    "main"
+  ],
+  "outputs": [
+    "main"
+  ],
+  "main": "Random.node.js",
+  "properties": [
+    {
+      "displayName": "Operation",
+      "name": "operation",
+      "type": "options",
+      "noDataExpression": true,
+      "options": [
+        {
+          "name": "True Random Number Generator",
+          "value": "generateRandomNumber"
+        }
+      ],
+      "default": "generateRandomNumber"
+    },
+    {
+      "displayName": "Min",
+      "name": "min",
+      "type": "number",
+      "typeOptions": {
+        "numberStepSize": 1
+      },
+      "default": 1,
+      "description": "O valor mínimo (inclusivo)."
+    },
+    {
+      "displayName": "Max",
+      "name": "max",
+      "type": "number",
+      "typeOptions": {
+        "numberStepSize": 1
+      },
+      "default": 100,
+      "description": "O valor máximo (inclusivo)."
+    }
+  ]
+}
