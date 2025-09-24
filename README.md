@@ -23,6 +23,12 @@ O objetivo deste projeto é:
 
 🚀 Acesso ao n8n
 
+1. Suba a infraestrutura com Docker Compose:
+
+```bash
+docker-compose up --build
+```
+
 Após subir a infraestrutura com Docker Compose, o n8n estará disponível localmente:
 
 http://localhost:5678
